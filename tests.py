@@ -16,3 +16,9 @@ class BaseTestCase(TestCase):
     def tearDown(self):
         db.session.remove()
         db.drop_all()
+
+class TestIndexCase(BaseTestCase):
+    
+    def test_index():
+        response = self.client.post(url_for('index'), data={'name': 'Mario'})
+        self.assertEqual(result.status_code, 200) 
