@@ -1,5 +1,5 @@
-from flask.ext.testing import TestCase
 from flask import url_for
+from flask.ext.testing import TestCase
 
 from . import app
 
