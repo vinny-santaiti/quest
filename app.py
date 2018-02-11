@@ -1,4 +1,5 @@
 from flask import Flask
+from SQLAlchemy
 app = Flask(__name__)
 
 app.config['DEBUG'] = True
@@ -11,6 +12,7 @@ POSTGRES = {
     }
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:\
     %(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
+db=SQLAlchemy(app)
 
 @app.route('/<name>')
 def index(name):
