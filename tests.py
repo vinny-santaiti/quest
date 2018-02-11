@@ -1,6 +1,7 @@
 from flask.ext.testing import TestCase
+from flask import url_for
 
-from . import app, db
+from . import app
 
 
 class BaseTestCase(TestCase):
@@ -11,14 +12,14 @@ class BaseTestCase(TestCase):
         return app
 
     def setUp(self):
-        db.create_all()
+        pass
 
     def tearDown(self):
-        db.session.remove()
-        db.drop_all()
+        pass
+
 
 class TestIndexCase(BaseTestCase):
     
-    def test_index():
+    def test_index(self):
         response = self.client.post(url_for('index'), data={'name': 'Mario'})
-        self.assertEqual(result.status_code, 200) 
+        self.assertEqual(response.status_code, 200)
