@@ -1,7 +1,7 @@
 import unittest
 from flask import url_for
 
-from quest import app
+from quest.app import app
 
 
 class BaseTestCase(unittest.TestCase):
@@ -12,6 +12,7 @@ class BaseTestCase(unittest.TestCase):
         return app
 
     def setUp(self):
+        app.config['TESTING'] = True
         self.app = app.test_client()
 
     def tearDown(self):
