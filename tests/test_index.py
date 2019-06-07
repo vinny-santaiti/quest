@@ -1,5 +1,5 @@
-from flask import url_for
 import unittest
+from flask import url_for
 
 from . import app
 
