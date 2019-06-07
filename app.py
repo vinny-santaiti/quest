@@ -14,11 +14,12 @@ POSTGRES = {
     }
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:\
     %(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
-    
+
 db = SQLAlchemy(app)
+
 
 @app.route('/<name>')
 @app.route('/')
 def index(name):
-	return render_template('index.html', name=name)
+    return render_template('index.html', name=name)
     # return 'Hello, {}!'.format('name')
