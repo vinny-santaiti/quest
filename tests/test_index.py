@@ -1,10 +1,10 @@
 from flask import url_for
-from flask.ext.testing import TestCase
+import unittest
 
 from . import app
 
 
-class BaseTestCase(TestCase):
+class BaseTestCase(unittest.TestCase):
     """A base test case for flask app"""
 
     def create_app(self):
