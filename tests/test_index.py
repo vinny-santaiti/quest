@@ -1,5 +1,4 @@
 import unittest
-from flask import url_for
 
 from quest.app import app
 
