@@ -3,7 +3,7 @@ click==6.7
 configparser==3.5.0
 enum34==1.1.6
 flake8==3.5.0
-Flask==0.12.2
+Flask==0.12.3
 Flask-Login==0.4.1
 Flask-SocketIO==2.9.3
 Flask-SQLAlchemy==2.3.2
