@@ -12,7 +12,7 @@ class BaseTestCase(unittest.TestCase):
         return app
 
     def setUp(self):
-        pass
+        self.app = app.test_client()
 
     def tearDown(self):
         pass
@@ -21,5 +21,5 @@ class BaseTestCase(unittest.TestCase):
 class TestIndexCase(BaseTestCase):
 
     def test_index(self):
-        response = self.client.post(url_for('index'), data={'name': 'Mario'})
+        response = self.app.post(url_for('index'), data={'name': 'Mario'})
         self.assertEqual(response.status_code, 200)
