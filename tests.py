@@ -19,7 +19,7 @@ class BaseTestCase(TestCase):
 
 
 class TestIndexCase(BaseTestCase):
-    
+
     def test_index(self):
         response = self.client.post(url_for('index'), data={'name': 'Mario'})
         self.assertEqual(response.status_code, 200)
