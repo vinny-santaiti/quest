@@ -19,7 +19,6 @@ db = SQLAlchemy(app)
 
 
 @app.route('/<name>')
-@app.route('/')
 def index(name):
     return render_template('index.html', name=name)
     # return 'Hello, {}!'.format('name')
