@@ -22,5 +22,5 @@ class BaseTestCase(unittest.TestCase):
 class TestIndexCase(BaseTestCase):
 
     def test_index(self):
-        response = self.app.post('/', data={'name': 'Mario'})
+        response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
