@@ -5,7 +5,7 @@ enum34==1.1.6
 flake8==3.5.0
 Flask==1.0
 Flask-Login==0.4.1
-Flask-SocketIO==2.9.3
+Flask-SocketIO==4.2.1
 Flask-SQLAlchemy==2.3.2
 # Flask-Testing==0.4
 funcsigs==1.0.2
